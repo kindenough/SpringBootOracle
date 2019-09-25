@@ -1,12 +1,13 @@
-Ò».ÊÖ¶¯ÅäÖÃoracle¿â
-1.×¼±¸ºÃÒ»¸öÆ¥ÅäÊı¾İ¿âµÄoracleÇı¶¯(oracle°²×°Ä¿Â¼ÏÂÒ²ÓĞ),ÎÒÔÚ´Ë´¦½«Ëü·ÅÔÚÁËDÅÌsoftware\oracleDriversÎÄ¼ş¼ĞÏÂ£¬ÕâÀïÎÒÓÃµÄÊÇojdbc6,¸ù¾İ¸öÈËÊ¹ÓÃÊı¾İ¿â²»Í¬,¿ÉÒÔ×¼±¸²»Í¬°æ±¾µÄÇı¶¯
+ä¸€.æ‰‹åŠ¨é…ç½®oracleåº“
+1.å‡†å¤‡å¥½ä¸€ä¸ªåŒ¹é…æ•°æ®åº“çš„oracleé©±åŠ¨(oracleå®‰è£…ç›®å½•ä¸‹ä¹Ÿæœ‰),æˆ‘åœ¨æ­¤å¤„å°†å®ƒæ”¾åœ¨äº†Dç›˜software\oracleDriversæ–‡ä»¶å¤¹ä¸‹ï¼Œè¿™é‡Œæˆ‘ç”¨çš„æ˜¯ojdbc6,æ ¹æ®ä¸ªäººä½¿ç”¨æ•°æ®åº“ä¸åŒ,å¯ä»¥å‡†å¤‡ä¸åŒç‰ˆæœ¬çš„é©±åŠ¨
 
-2.ÔÚ±¾µØ²Ö¿âÅäÖÃºÃÇı¶¯¼°Æä°æ±¾
-¾ßÌå²Ù×÷ÈçÏÂ:´ò¿ªcmd,ÊäÈëÒÔÏÂÃüÁî²¢Ö´ĞĞ:
+2.åœ¨æœ¬åœ°ä»“åº“é…ç½®å¥½é©±åŠ¨åŠå…¶ç‰ˆæœ¬
+å…·ä½“æ“ä½œå¦‚ä¸‹:æ‰“å¼€cmd,cdåˆ°ç›®å½•D:/Program Files/JetBrains/IntelliJ IDEA 2019.1.2/plugins/maven/lib/maven3
+ç„¶åè¾“å…¥ä»¥ä¸‹å‘½ä»¤å¹¶æ‰§è¡Œ:
 mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1.0 -Dpackaging=jar -Dfile=D:\software\oracleDrivers\ojdbc6.jar
-ÕâÀïÎÒ¸øÎÒ±¾µØµÄojdbc6.jarÅäÖÃµÄÊÇ11.2.0.1.0°æ±¾
+è¿™é‡Œæˆ‘ç»™æˆ‘æœ¬åœ°çš„ojdbc6.jaré…ç½®çš„æ˜¯11.2.0.1.0ç‰ˆæœ¬
 
-3.pom.xmlÌí¼ÓÅäÖÃ
+3.pom.xmlæ·»åŠ é…ç½®
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -19,7 +20,7 @@ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2
             <scope>runtime</scope>
         </dependency>
 
-¶ş.IDEA×Ô¶¯´´½¨ÊµÌåÀàentity
-µã»÷File£¬µ¯³öµÄ²Ëµ¥ÖĞµã»÷Project Structure£»
-µã»÷×ó²àµÄModules£¬ÔÙµã»÷¡°+¡±ºÅ£¬ÔÙÔÚµ¯³öµÄ²Ëµ¥ÖĞÑ¡ÔñHibernate£»
-ÔÚÕâÊ±£¬ÏîÄ¿ÖĞ¶à³öÁËÒ»¸öHibernate£¬µã»÷Hibernate£¬ÔÙµã»÷¡°+¡±ºÅ£¬Ñ¡Ôñhibernate.hbm.xml£»
+äºŒ.IDEAè‡ªåŠ¨åˆ›å»ºå®ä½“ç±»entity
+ç‚¹å‡»Fileï¼Œå¼¹å‡ºçš„èœå•ä¸­ç‚¹å‡»Project Structureï¼›
+ç‚¹å‡»å·¦ä¾§çš„Modulesï¼Œå†ç‚¹å‡»â€œ+â€å·ï¼Œå†åœ¨å¼¹å‡ºçš„èœå•ä¸­é€‰æ‹©Hibernateï¼›
+åœ¨è¿™æ—¶ï¼Œé¡¹ç›®ä¸­å¤šå‡ºäº†ä¸€ä¸ªHibernateï¼Œç‚¹å‡»Hibernateï¼Œå†ç‚¹å‡»â€œ+â€å·ï¼Œé€‰æ‹©hibernate.hbm.xmlï¼›
