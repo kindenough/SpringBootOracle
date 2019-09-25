@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="OracleMapper">
+    <select id="test2" resultType="com.example.demo.entity.Dldypl">
+        select * from DLDYPL where OBJECTID = #{id}
+    </select>
+    <select id="getDldypl" resultType="com.example.demo.entity.Dldypl">
+        select t.wyid,t.name,t.DLDYMC from dldypl t where
+        sde.st_intersects(t.shape,sde.st_buffer(sde.st_point(#{x},#{y},4490),#{distance}/111000.0))=1
+    </select>
+
+<!--    <select id="test3" resultType="com.example.demo.entity.test3">-->
+<!--        select * from test3 where id = #{id}-->
+<!--    </select>-->
+</mapper>
