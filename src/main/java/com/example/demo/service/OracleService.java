@@ -1,9 +1,12 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Dldypl;
+import com.example.demo.entity.T_POSITION;
 import com.example.demo.entity.Test2;
 import com.example.demo.entity.Test3;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +30,24 @@ public class OracleService {
         map.put("data",ret);
         return map;
     }
+    public Object getXY(String id){
+        Map map = new HashMap();
+        map.put("id",id);
+        List<T_POSITION> ret =
+                sqlSessionTemplate.selectList("OracleMapper.getXY",
+                        map);
+        map.put("data", ret);
+        return map;
+    }
+    public Object updateXY(String id,String x,String y){
+        Map map = new HashMap();
+        map.put("id",id);
+        map.put("x",x);
+        map.put("y",y);
+        sqlSessionTemplate.update("OracleMapper.updateXY",
+                        map);
+        return map;
+    }
     public Object getDldypl(String xy){
         Map map = new HashMap();
         String[] arr = xy.split(",");
@@ -41,6 +62,9 @@ public class OracleService {
                 sqlSessionTemplate.selectList("OracleMapper.getDldypl",
                         map);
         map.put("data",ret);
+        Logger logger = LoggerFactory.getLogger(getClass());
+        logger.info("info日志输出信息:");
+        logger.debug("debug日志输出信息:");
         return map;
     }
 //

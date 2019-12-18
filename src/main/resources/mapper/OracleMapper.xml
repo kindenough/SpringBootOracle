@@ -9,6 +9,12 @@
         sde.st_intersects(t.shape,sde.st_buffer(sde.st_point(#{x},#{y},4490),#{distance}/111000.0))=1
     </select>
 
+    <select id="getXY" resultType="com.example.demo.entity.T_POSITION">
+        select * from T_POSITION where id = #{id}
+    </select>
+    <select id="updateXY" resultType="com.example.demo.entity.T_POSITION">
+        update T_POSITION set lon=#{x},lat=#{y} where id = #{id}
+    </select>
 <!--    <select id="test3" resultType="com.example.demo.entity.test3">-->
 <!--        select * from test3 where id = #{id}-->
 <!--    </select>-->
